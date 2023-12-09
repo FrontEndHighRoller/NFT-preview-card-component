@@ -1,0 +1,170 @@
+/* CSS RESET ............................................................*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* CSS RESET ............................................................*/
+
+/* Colours. ............................................................*/
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main: hsl(217, 54%, 11%); /*(main BG) */
+  --Very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG) */
+  --Very-dark-blue-line: hsl(215, 32%, 27%); /*(line) */
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Colours ............................................................*/
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+.main-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue-main);
+}
+
+.card {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: var(--Very-dark-blue-card);
+  gap: 0.8rem;
+  margin: 5rem 2.5rem;
+  max-width: 19rem;
+}
+
+.card_etherum_image {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.card_image_overlay_container {
+  position: relative;
+}
+
+.card_image_overlay_container:hover .card_overlay {
+  opacity: 0.7;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.card_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: var(--Cyan);
+}
+
+.card_overlay_icon {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_h1 {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.card_paragraph {
+  font-size: 0.9rem;
+  color: var(--Soft-blue);
+  font-weight: 400;
+}
+
+.card_icons_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_text_left {
+  color: var(--Cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.etherum_icon {
+  content: url(images/icon-ethereum.svg);
+  height: 0.93rem;
+  margin-right: 0.3rem;
+}
+
+.card_text_right {
+  color: var(--Soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time_icon {
+  content: url(images/icon-clock.svg);
+  height: 0.93rem;
+  margin-right: 0.3rem;
+}
+
+.card_horizontal_line {
+  height: 0.06rem;
+  width: 100%;
+  background-color: var(--Soft-blue);
+}
+
+.card_testimonial {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.card_testimonial_avatar {
+  height: 1.8rem;
+  border: 0.06rem solid white;
+  border-radius: 3.1rem;
+}
+
+.card_testimonial_paragraph {
+  color: var(--Soft-blue);
+}
+
+.card_testimonial_name {
+  color: var(--White);
+}
+
+/* active states */
+
+.card_h1:hover,
+.card_testimonial_name:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
